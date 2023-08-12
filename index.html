@@ -13,8 +13,8 @@
 </head>
 <body>
   <div id="app"></div>
+  <script src="https://unpkg.com/hrjs"></script>
   <script>
-
     window.$docsify = {
       name: '',
       repo: '',
@@ -36,6 +36,18 @@
         noData: "Нету",
         hideOtherSidebarContent: true,
       },
+
+      pagination: {
+        previousText: 'Предыдущая часть',
+        nextText: {
+          '/': 'Следующая часть'
+        },
+      crossChapter: true,
+      crossChapterText: true,
+      },
+      highliteSettings: {
+        highlite: true,
+      },
       count:{
         countable: true,
         position: 'top',
@@ -49,20 +61,14 @@
         },
         isExpected: true
       },
-      pagination: {
-        previousText: 'Предыдущая часть',
-        nextText: {
-          '/': 'Следующая часть'
-        },
-      crossChapter: true,
-      crossChapterText: true,
-  },
     }
   </script>
+  <script src="custom_highliting.js"></script>
   <script src="custom_word_count.js"></script>
 
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
 </body>
 </html>
